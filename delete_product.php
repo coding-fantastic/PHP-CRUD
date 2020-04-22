@@ -6,6 +6,10 @@ if($_POST){
   include_once 'config/database.php';
   include_once 'objects/product.php';
 
+  // get database connection
+  $database = new Database();
+  $db = $database->getConnection();
+
     // set product id to be deleted
     $product->id = $_POST['object_id'];
 
