@@ -10,6 +10,9 @@ if($_POST){
   $database = new Database();
   $db = $database->getConnection();
 
+  // prepare product object
+  $product = new Product($db);
+
     // set product id to be deleted
     $product->id = $_POST['object_id'];
 
